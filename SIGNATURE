@@ -1,0 +1,59 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.68.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 842745cb706f8f2126506f544492f7a80dbe29b3 COPYING
+SHA1 a8be058a22b2b32938041d1f02bcf0deb685be26 Changes
+SHA1 5308efc681f0dbe5e3e8e0438bf3d86a06b639c4 MANIFEST
+SHA1 1d745ef4cc154d3b13bfee6d1048ac4135fc1aa7 MANIFEST.SKIP
+SHA1 79d106fd8c07cd9394b4804c7aace0f2ed14aab9 META.yml
+SHA1 264f02bce0af6518b7def3e45080e84d74a25589 Makefile.PL
+SHA1 d62cdd8544b271ca366022ec1a75978a469e8884 debian/changelog
+SHA1 ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4 debian/compat
+SHA1 31f330821ef9cf335d0017f90c60882ba53bd01c debian/control
+SHA1 573da9d0c72bbc4dabf38066d4e3eb2d485c1264 debian/copyright
+SHA1 abc753910bf1dda1c0d7dbd8f657b722676404c5 debian/rules
+SHA1 61652cd1568dcf2614df833eba241755eee34e89 debian/source/format
+SHA1 352795b47d8d5025787c210048870e8d103077fc debian/watch
+SHA1 7df07cbd9839cea54e776618f0075fc73ec31da3 devel/gd.pl
+SHA1 df4430f6ae6b0f2f500744e8de10ba04d51d9608 devel/shm.pl
+SHA1 a2d504e1a686b0a5d9a4a8990bba58587b30297f devel/weaken.pl
+SHA1 fec43eef57abc0e56810e7b2b5cfb4f5bf11323f inc/MyMakeMakerExtras.pm
+SHA1 7a988b2aa7ed09f1cb9029a1ef3f0e2139dca0cf inc/my_pod2html
+SHA1 8092e3eb6171acaab570d2e361d24fd40d91a500 lib/Test/Weaken/ExtraBits.pm
+SHA1 a93149573a223044ddaa3ccae12563a78d31d52d lib/Test/Without/GD.pm
+SHA1 a5fad186ef1a02790e07d3757bb4fc6d81aa578a lib/Test/Without/Shm.pm
+SHA1 34f91e11c798440ffc937beb2f9c5da23ee27e74 t/ExtraBits.t
+SHA1 18b1be7defe1da8fe767c8158d841fa8292cfa30 t/GD-use.t
+SHA1 7cbfd9bf15948b19f71c0f54f11b607c052d8385 t/MyTestHelpers.pm
+SHA1 0c81869b87ab796d65b959033df4e72b230e3c9f t/Shm-use-empty.t
+SHA1 821ffa4641d31aeb1be12a7977af9d68d768a264 t/Shm-use.t
+SHA1 c5dede3c96ab29cf306fb8c9b4a278745f6020a4 t/Shm.t
+SHA1 0279c9310ec528d10a2a14e602bf98f1c776cce1 xt/0-META-read.t
+SHA1 219395eb91b03829e6f14db4ebd57d88ea972e61 xt/0-Test-ConsistentVersion.t
+SHA1 8a5e0f34131de34e584fbb1939c191a152566155 xt/0-Test-DistManifest.t
+SHA1 cc04a5fe5d8b8b38bfd56453d5d2686c8ea58783 xt/0-Test-Pod.t
+SHA1 194f76a77d4b022a8b707932d3a45be310400360 xt/0-Test-YAML-Meta.t
+SHA1 bdc59bfb29089f4c801a4282c0c3498f9a7982e5 xt/0-examples-xrefs.t
+SHA1 d1d6dc2ff925e7ba5c014ce1361e6d097d061f2a xt/0-file-is-part-of.t
+SHA1 daba2840c7f128371d42516619a0e04fee2f5ff4 xt/0-no-debug-left-on.t
+SHA1 f686a1fc79462603caf59ec214c9d4b3d50eca6d xt/1-Test-Synopsis.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iD8DBQFOe6wLLFMCIV9q3ToRAg50AKCjlqVoZWxFsowyKWDZw3as0JTJrACfZZxH
+7jtXvCUfhasgGfqwJTf2i5E=
+=WsZL
+-----END PGP SIGNATURE-----
