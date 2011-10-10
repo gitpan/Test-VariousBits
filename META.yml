@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Test-VariousBits
-version:            1
+version:            2
 abstract:           Various test helpers.
 author:
     - Kevin Ryde <user42@zip.com.au>
@@ -33,6 +33,7 @@ optional_features:
         requires:
             base:                0
             Data::Dumper:        0
+            Devel::Comments:     0
             File::Spec:          0
             FindBin:             0
             Parse::CPAN::Meta:   0
@@ -54,4 +55,8 @@ optional_features:
     maximum_tests:
         description:  Have "make test" do as much as possible.
         requires:
-            IPC::SysV:  0
+            IPC::SysV:            0
+            Module::Mask:         0
+            Module::Util:         0
+            Scalar::Util:         0
+            Test::Without::Module:  0

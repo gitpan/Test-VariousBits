@@ -51,7 +51,11 @@ MyMakeMakerExtras::WriteMakefile
        },
        maximum_tests =>
        { description => 'Have "make test" do as much as possible.',
-         requires => { 'IPC::SysV' => 0,
+         requires => { 'IPC::SysV'             => 0,
+                       'Module::Util'          => 0,
+                       'Module::Mask'          => 0,
+                       'Test::Without::Module' => 0,
+                       'Scalar::Util'          => 0,
                      },
        },
        maximum_devel =>

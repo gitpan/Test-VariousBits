@@ -28,7 +28,7 @@ ok (1, 1, 'Test::Without::Shm load as first thing');
 #------------------------------------------------------------------------------
 # VERSION
 
-my $want_version = 1;
+my $want_version = 2;
 ok ($Test::Without::Shm::VERSION,
     $want_version,
     'VERSION variable');

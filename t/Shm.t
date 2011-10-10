@@ -22,7 +22,7 @@ use strict;
 use Test::Without::Shm;
 
 use Test;
-my $test_count = 4;
+my $test_count = (tests => 4)[1];
 plan tests => $test_count;
 
 use lib 't';

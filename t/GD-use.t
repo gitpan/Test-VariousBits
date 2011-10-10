@@ -29,7 +29,7 @@ ok (1, 1, 'Test::Without::GD load as first thing');
 #------------------------------------------------------------------------------
 # VERSION
 
-my $want_version = 1;
+my $want_version = 2;
 ok ($Test::Without::GD::VERSION,
     $want_version,
     'VERSION variable');

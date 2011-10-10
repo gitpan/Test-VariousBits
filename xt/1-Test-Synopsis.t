@@ -38,6 +38,9 @@ my @files = grep m{^lib/.*\.pm$}, keys %$manifest;
 # Test::Without::GD synopsis is a "perl -M"
 @files = grep {! m</Test/Without/GD\.pm$> } @files;
 
+# Module::Util::Masked synopsis is a "perl -M"
+@files = grep {! m</Module/Util/Masked\.pm$> } @files;
+
 plan tests => 1 * scalar(@files);
 
 ## no critic (ProhibitCallsToUndeclaredSubs)

@@ -27,7 +27,7 @@ require 5;
 use strict;
 
 use vars '$VERSION';
-$VERSION = 1;
+$VERSION = 2;
 
 # uncomment this to run the ### lines
 #use Devel::Comments;
@@ -178,7 +178,7 @@ memory,
 
     perl -MTest::Without::Shm=-nomem myprog.pl ...
 
-For the usual C<ExtUtils::MakeMaker> harnes the C<-M> can be put in the
+For the usual C<ExtUtils::MakeMaker> harness the C<-M> can be put in the
 C<HARNESS_PERL_SWITCHES> environment variable in the usual way,
 
     HARNESS_PERL_SWITCHES="-MTest::Without::Shm" make test
