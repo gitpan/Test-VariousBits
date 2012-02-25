@@ -1,4 +1,4 @@
-# Copyright 2011 Kevin Ryde
+# Copyright 2011, 2012 Kevin Ryde
 
 # This file is part of Test-VariousBits.
 #
@@ -21,10 +21,11 @@ use 5.004;  # for ->can()
 use strict;
 
 use vars '$VERSION';
-$VERSION = 2;
+$VERSION = 3;
 
 # uncomment this to run the ### lines
 #use Smart::Comments;
+
 
 sub _croak {
   require Carp;
@@ -54,6 +55,7 @@ sub unimport {
   }
 }
 
+#------------------------------------------------------------------------------
 sub without_jpeg {
   _without_func('GD::Image::_newFromJpeg');
   _without_func('GD::Image::newFromJpegData');
@@ -62,6 +64,8 @@ sub without_jpeg {
     die "Oops, GD::Image->can('jpeg') still true: $coderef";
   }
 }
+
+#------------------------------------------------------------------------------
 sub without_png {
   _without_func('GD::Image::_newFromPng');
   _without_func('GD::Image::newFromPngData');
@@ -70,6 +74,8 @@ sub without_png {
     die "Oops, GD::Image->can('png') still true: $coderef";
   }
 }
+
+#------------------------------------------------------------------------------
 sub without_gif {
   _without_func('GD::Image::_newFromGif');
   _without_func('GD::Image::newFromGifData');
@@ -79,10 +85,12 @@ sub without_gif {
   }
 }
 
+#------------------------------------------------------------------------------
+
 sub without_gifanim {
-  _change_func('GD::Image::gifanimbegin', \&_no__gifanim);
-  _change_func('GD::Image::gifanimadd',   \&_no__gifanim);
-  _change_func('GD::Image::gifanimend',   \&_no__gifanim);
+  _change_func('GD::Image::gifanimbegin', \&_Test_Without_GD__gifanimbegin);
+  _change_func('GD::Image::gifanimadd',   \&_Test_Without_GD__gifanimadd);
+  _change_func('GD::Image::gifanimend',   \&_Test_Without_GD__gifanimend);
   if (eval { GD::Image->gifanim; 1 }) {
     die "Oops, GD::Image->gifanim() still works";
   }
@@ -102,12 +110,15 @@ sub _Test_Without_GD__gifanimend ($) {
   die "libgd 2.0.33 or higher required for animated GIF support";
 }
 
+#------------------------------------------------------------------------------
+
 sub without_xpm {
-  _change_func('GD::Image::newFromXpm', \&_no__newFromXpm);
+  _change_func('GD::Image::newFromXpm', \&_Test_Without_GD__newFromXpm);
 }
 # prototype here per GD.xs, but presumably has no effect since it's supposed
 # to be called as a method
 sub _Test_Without_GD__newFromXpm ($$) {
+  ### _Test_Without_GD__newFromXpm() ...
   # empty return and $@ per gdnewFromXpm() in GD.xs when HAVE_XPM false
   $@ = "libgd was not built with xpm support\n";
   return;
@@ -127,6 +138,11 @@ sub _without_func {
 }
 sub _change_func {
   my ($name, $new_coderef) = @_;
+  ### _change_func(): $name
+  ### $new_coderef
+  ### name prototype: prototype $name
+  ### new prototype : prototype $new_coderef
+
   require GD;
   unless ($replaced{$name}) {
     $replaced{$name} = \&$name;
@@ -263,7 +279,7 @@ http://user42.tuxfamily.org/test-variousbits/index.html
 
 =head1 COPYRIGHT
 
-Copyright 2011 Kevin Ryde
+Copyright 2011, 2012 Kevin Ryde
 
 Test-VariousBits is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License as published

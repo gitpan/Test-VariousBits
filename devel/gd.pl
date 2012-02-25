@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# Copyright 2011 Kevin Ryde
+# Copyright 2011, 2012 Kevin Ryde
 
 # This file is part of Test-VariousBits.
 #
@@ -21,11 +21,27 @@
 use FindBin;
 use GD;
 use Test::Without::GD;
-Test::Without::GD->without_png;
-Test::Without::GD->without_jpeg;
-#Test::Without::GD->without_gif;
 
-GD::Image->newFromGif('/usr/share/xulrunner-1.9.1/res/arrow.gif');
-GD::Image->newFromJpeg('/usr/share/doc/imagemagick/images/background.jpg');
-GD::Image->newFromPng('/usr/share/xemacs-21.4.22/etc/cbx.png');
-GD::Image->newFromPngData('');
+# uncomment this to run the ### lines
+use Smart::Comments;
+
+
+{
+  my $prototype = prototype 'GD::Image::newFromXpm';
+  ### $prototype
+
+  Test::Without::GD->without_xpm;
+  exit 0;
+}
+
+{
+  Test::Without::GD->without_png;
+  Test::Without::GD->without_jpeg;
+  #Test::Without::GD->without_gif;
+
+  GD::Image->newFromGif('/usr/share/xulrunner-1.9.1/res/arrow.gif');
+  GD::Image->newFromJpeg('/usr/share/doc/imagemagick/images/background.jpg');
+  GD::Image->newFromPng('/usr/share/xemacs-21.4.22/etc/cbx.png');
+  GD::Image->newFromPngData('');
+  exit 0;
+}

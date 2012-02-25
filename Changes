@@ -1,4 +1,4 @@
-Copyright 2011 Kevin Ryde
+Copyright 2011, 2012 Kevin Ryde
 
 This file is part of Test-VariousBits.
 
@@ -16,6 +16,9 @@ You should have received a copy of the GNU General Public License along
 with Test-VariousBits.  If not, see <http://www.gnu.org/licenses/>.
 
 
+
+Version 3, February 2012
+    - Test::Without::GD fixes for without gifanim and xpm
 
 Version 2, October 2011
     - new Module::Util::Masked

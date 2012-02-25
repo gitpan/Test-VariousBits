@@ -1,6 +1,6 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 
-# Copyright 2011 Kevin Ryde
+# Copyright 2011, 2012 Kevin Ryde
 
 # This file is part of Test-VariousBits.
 #
@@ -20,10 +20,8 @@
 require 5;
 use strict;
 use ExtUtils::MakeMaker;
-use lib 'inc';
-use MyMakeMakerExtras;
 
-MyMakeMakerExtras::WriteMakefile
+WriteMakefile
   (NAME         => 'Test-VariousBits',
    ABSTRACT     => 'Various test helpers.',
    VERSION_FROM => 'lib/Test/Without/Shm.pm',
@@ -42,6 +40,7 @@ MyMakeMakerExtras::WriteMakefile
    META_MERGE =>
    { resources =>
      { homepage => 'http://user42.tuxfamily.org/test-variousbits/index.html',
+       license  => 'http://www.gnu.org/licenses/gpl.html',
      },
      optional_features =>
      { maximum_interoperation =>
@@ -56,14 +55,6 @@ MyMakeMakerExtras::WriteMakefile
                        'Module::Mask'          => 0,
                        'Test::Without::Module' => 0,
                        'Scalar::Util'          => 0,
-                     },
-       },
-       maximum_devel =>
-       { description => 'Stuff used variously for development.',
-         requires => { 'base'         => 0,
-                       'Data::Dumper' => 0,
-                       'File::Spec'   => 0,
-                       'Scalar::Util' => 0,
                      },
        },
      },

@@ -1,4 +1,4 @@
-# Copyright 2011 Kevin Ryde
+# Copyright 2011, 2012 Kevin Ryde
 
 # This file is part of Test-VariousBits.
 #
@@ -27,7 +27,7 @@ require 5;
 use strict;
 
 use vars '$VERSION';
-$VERSION = 2;
+$VERSION = 3;
 
 # uncomment this to run the ### lines
 #use Devel::Comments;
@@ -258,7 +258,7 @@ http://user42.tuxfamily.org/test-variousbits/index.html
 
 =head1 COPYRIGHT
 
-Copyright 2011 Kevin Ryde
+Copyright 2011, 2012 Kevin Ryde
 
 Test-VariousBits is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License as published
